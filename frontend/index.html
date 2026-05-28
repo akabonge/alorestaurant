@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Alo's Bistro — Fredericksburg, VA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red:    #8B1A1A;
+      --cream:  #FDF6EC;
+      --gold:   #C9A84C;
+      --dark:   #1C1C1C;
+      --gray:   #6B6B6B;
+      --light:  #F5EDE0;
+      --white:  #FFFFFF;
+      --shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav {
+      background: var(--dark);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold);
+      font-size: 1.35rem;
+      letter-spacing: 0.5px;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.875rem;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #1a0a0a 0%, #2d0f0f 50%, #1a0a0a 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.6;
+    }
+    .hero-content { position: relative; max-width: 640px; margin: 0 auto; }
+    .hero-eyebrow {
+      color: var(--gold);
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero p {
+      color: #d4c4b0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .hero-cta {
+      display: inline-flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      border: none;
+    }
+    .btn-primary:hover { background: #a82020; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-1px); }
+
+    /* ── INFO STRIP ──────────────────────────────────────── */
+    .info-strip {
+      background: var(--red);
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      padding: 1rem 2rem;
+    }
+    .info-strip span {
+      color: white;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .info-strip .icon { font-size: 1rem; }
+
+    /* ── SECTIONS ────────────────────────────────────────── */
+    section { padding: 4rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      color: var(--red);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 1.25rem;
+      color: var(--dark);
+    }
+    .section-subtitle {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* ── MENU HIGHLIGHTS ─────────────────────────────────── */
+    .menu-section { background: var(--white); }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .menu-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .menu-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .menu-card-header {
+      background: linear-gradient(135deg, var(--dark), #3d1a1a);
+      padding: 1.25rem 1.5rem;
+    }
+    .menu-card-category {
+      color: var(--gold);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .menu-card-name {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      font-size: 1.2rem;
+    }
+    .menu-card-body { padding: 1.25rem 1.5rem; }
+    .menu-card-desc {
+      color: var(--gray);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .menu-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .price {
+      font-weight: 600;
+      color: var(--red);
+      font-size: 1.1rem;
+    }
+    .badge {
+      background: var(--light);
+      color: var(--red);
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* ── HOURS & LOCATION ───────────────────────────────── */
+    .info-section { background: var(--light); }
+    .info-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 680px) { .info-cols { grid-template-columns: 1fr; } }
+    .info-block h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e8ddd0;
+      font-size: 0.9rem;
+    }
+    .hours-row:last-child { border: none; }
+    .hours-row .day { color: var(--gray); }
+    .hours-row .time { font-weight: 500; }
+    .location-detail {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+    .location-detail .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+    /* ── CHAT WIDGET ─────────────────────────────────────── */
+    #chat-bubble {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      width: 58px;
+      height: 58px;
+      background: var(--red);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(139,26,26,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+      z-index: 999;
+    }
+    #chat-bubble:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 28px rgba(139,26,26,0.55);
+    }
+    #chat-bubble svg { width: 26px; height: 26px; fill: white; }
+    #chat-bubble .close-icon { display: none; }
+    #chat-bubble.open .chat-icon { display: none; }
+    #chat-bubble.open .close-icon { display: block; }
+
+    #chat-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: var(--gold);
+      color: var(--dark);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #chat-window {
+      position: fixed;
+      bottom: 6rem;
+      right: 1.75rem;
+      width: 380px;
+      max-height: 560px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 998;
+      transform: scale(0.9) translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    #chat-window.open {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    @media (max-width: 440px) {
+      #chat-window { width: calc(100vw - 2rem); right: 1rem; }
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, var(--dark), #3d1a1a);
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .chat-header-avatar {
+      width: 38px;
+      height: 38px;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .chat-header-info {}
+    .chat-header-name {
+      color: white;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .chat-header-status {
+      color: #9de09d;
+      font-size: 0.72rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .chat-header-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #4caf50;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      scroll-behavior: smooth;
+    }
+    .chat-messages::-webkit-scrollbar { width: 4px; }
+    .chat-messages::-webkit-scrollbar-track { background: transparent; }
+    .chat-messages::-webkit-scrollbar-thumb { background: #ddd; border-radius: 2px; }
+
+    .msg {
+      max-width: 88%;
+      padding: 0.7rem 0.95rem;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      line-height: 1.55;
+      animation: fadeUp 0.25s ease;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .msg-bot {
+      background: var(--light);
+      color: var(--dark);
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+    .msg-user {
+      background: var(--red);
+      color: white;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+    .msg-sources {
+      font-size: 0.7rem;
+      color: var(--gray);
+      margin-top: 0.3rem;
+      align-self: flex-start;
+      padding: 0 0.25rem;
+    }
+
+    .typing-indicator {
+      display: flex;
+      gap: 4px;
+      padding: 0.7rem 0.95rem;
+      background: var(--light);
+      border-radius: 12px;
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+      align-items: center;
+    }
+    .typing-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--gray);
+      border-radius: 50%;
+      animation: bounce 1.2s infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); }
+      30%            { transform: translateY(-5px); }
+    }
+
+    .chat-suggestions {
+      padding: 0 1rem 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .suggestion-chip {
+      background: var(--light);
+      border: 1px solid #e0d4c4;
+      color: var(--dark);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .suggestion-chip:hover { background: var(--red); color: white; border-color: var(--red); }
+
+    .chat-input-area {
+      padding: 0.75rem 1rem;
+      border-top: 1px solid #eee;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-end;
+    }
+    #chat-input {
+      flex: 1;
+      border: 1px solid #ddd;
+      border-radius: 22px;
+      padding: 0.65rem 1rem;
+      font-size: 0.875rem;
+      font-family: 'Inter', sans-serif;
+      resize: none;
+      outline: none;
+      max-height: 100px;
+      transition: border-color 0.2s;
+      line-height: 1.4;
+    }
+    #chat-input:focus { border-color: var(--red); }
+    #send-btn {
+      width: 38px;
+      height: 38px;
+      background: var(--red);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s, transform 0.1s;
+    }
+    #send-btn:hover { background: #a82020; transform: scale(1.05); }
+    #send-btn:disabled { background: #ccc; cursor: default; transform: none; }
+    #send-btn svg { width: 16px; height: 16px; fill: white; }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: #888;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+    footer strong { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Casa Alo's Bistro</div>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#info">Hours</a></li>
+    <li><a href="#info">Location</a></li>
+    <li><a href="#" onclick="openChat(); return false;" style="color: var(--gold);">Chat with Us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Historic Downtown Fredericksburg, VA</p>
+    <h1>Italian soul.<br><em>Fredericksburg</em> heart.</h1>
+    <p>House-made pastas, wood-fired pizzas, and honest Italian cooking — crafted from local ingredients and served with warmth since day one.</p>
+    <div class="hero-cta">
+      <a href="tel:5405550123" class="btn btn-primary">Reserve a Table</a>
+      <a href="#menu" class="btn btn-outline">View Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <span><span class="icon">📍</span> 1217 Caroline St, Fredericksburg VA</span>
+  <span><span class="icon">📞</span> (540) 555-0123</span>
+  <span><span class="icon">🕐</span> Mon–Thu 11am–9pm &nbsp;|&nbsp; Fri–Sat 11am–10pm &nbsp;|&nbsp; Sun 10am–8pm</span>
+</div>
+
+<!-- MENU HIGHLIGHTS -->
+<section class="menu-section" id="menu">
+  <div class="section-inner">
+    <p class="section-label">Our Kitchen</p>
+    <h2 class="section-title">Menu Highlights</h2>
+    <p class="section-subtitle">Every pasta is made fresh in-house daily. Every pizza is fired in our 800°F wood-burning oven. This is the real thing.</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <div class="menu-card-category">Pasta</div>
+          <div class="menu-card-name">Cacio e Pepe</div>
+        </div>
+        <div class="menu-card-body">
+          <p class="menu-card-desc">Roman-style pasta tossed with Pecorino Romano, cracked black pepper, and a touch of butter. Simple. Perfect.</p>
+          <div class="menu-card-footer">
+            <span class="price">$18</span>
+            <span class="badge">⭐ Most Popular</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <div class="menu-card-category">Wood-Fired Pizza</div>
+          <div class="menu-card-name">Margherita</div>
+        </div>
+        <div class="menu-card-body">
+          <p class="menu-card-desc">San Marzano tomato sauce, fresh fior di latte mozzarella, fresh basil, and extra virgin olive oil. The classic.</p>
+          <div class="menu-card-footer">
+            <span class="price">$17</span>
+            <span class="badge">Vegetarian</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <div class="menu-card-category">Mains</div>
+          <div class="menu-card-name">Osso Buco alla Milanese</div>
+        </div>
+        <div class="menu-card-body">
+          <p class="menu-card-desc">Slow-braised veal shank with gremolata over saffron risotto. Our weekend special — available Fridays and Saturdays.</p>
+          <div class="menu-card-footer">
+            <span class="price">$42</span>
+            <span class="badge">Fri–Sat Only</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <div class="menu-card-category">Dessert</div>
+          <div class="menu-card-name">Tiramisù</div>
+        </div>
+        <div class="menu-card-body">
+          <p class="menu-card-desc">Classic tiramisù with house-espresso-soaked ladyfingers, mascarpone cream, and a generous dusting of dark cocoa.</p>
+          <div class="menu-card-footer">
+            <span class="price">$10</span>
+            <span class="badge">⭐ Fan Favorite</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <div class="menu-card-category">Starter</div>
+          <div class="menu-card-name">Burrata e Prosciutto</div>
+        </div>
+        <div class="menu-card-body">
+          <p class="menu-card-desc">Creamy burrata alongside prosciutto di Parma, roasted cherry tomatoes, and aged balsamic. Gluten-free.</p>
+          <div class="menu-card-footer">
+            <span class="price">$15</span>
+            <span class="badge">Gluten-Free</span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-header">
+          <div class="menu-card-category">Pasta</div>
+          <div class="menu-card-name">Tagliatelle al Ragù</div>
+        </div>
+        <div class="menu-card-body">
+          <p class="menu-card-desc">Slow-braised beef and pork ragù over egg tagliatelle, finished with Parmigiano-Reggiano. Four hours in the making.</p>
+          <div class="menu-card-footer">
+            <span class="price">$22</span>
+            <span class="badge">House-Made Pasta</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS & LOCATION -->
+<section class="info-section" id="info">
+  <div class="section-inner">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Hours & Location</h2>
+    <div class="info-cols">
+      <div class="info-block">
+        <h3>Hours</h3>
+        <div class="hours-row"><span class="day">Monday – Thursday</span><span class="time">11:00 AM – 9:00 PM</span></div>
+        <div class="hours-row"><span class="day">Friday – Saturday</span><span class="time">11:00 AM – 10:00 PM</span></div>
+        <div class="hours-row"><span class="day">Sunday</span><span class="time">10:00 AM – 8:00 PM</span></div>
+        <div class="hours-row"><span class="day">Happy Hour (Mon–Fri)</span><span class="time">3:00 PM – 6:00 PM</span></div>
+        <div class="hours-row"><span class="day">Sunday Brunch</span><span class="time">10:00 AM – 3:00 PM</span></div>
+      </div>
+      <div class="info-block">
+        <h3>Location</h3>
+        <div class="location-detail">
+          <span class="icon">📍</span>
+          <span>1217 Caroline Street<br>Fredericksburg, VA 22401<br>Historic Downtown</span>
+        </div>
+        <div class="location-detail">
+          <span class="icon">🚗</span>
+          <span>Free private lot off Hanover Street alley, behind the restaurant. Street parking also available.</span>
+        </div>
+        <div class="location-detail">
+          <span class="icon">🚉</span>
+          <span>5-minute walk from Fredericksburg VRE Station</span>
+        </div>
+        <div class="location-detail">
+          <span class="icon">📞</span>
+          <span>(540) 555-0123</span>
+        </div>
+        <div class="location-detail">
+          <span class="icon">📧</span>
+          <span>hello@casaalosbistro.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Casa Alo's Bistro</strong><br>
+  1217 Caroline Street · Fredericksburg, VA 22401 · (540) 555-0123<br>
+  © 2026 Casa Alo's Bistro. All rights reserved.
+</footer>
+
+<!-- ── CHAT BUBBLE ──────────────────────────────────────────────────────── -->
+<div id="chat-bubble" onclick="toggleChat()">
+  <svg class="chat-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+  <svg class="close-icon" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  <span id="chat-badge">1</span>
+</div>
+
+<!-- ── CHAT WINDOW ──────────────────────────────────────────────────────── -->
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header-avatar">🍝</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Aria — Casa Alo's Assistant</div>
+      <div class="chat-header-status">Online now</div>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="chat-messages">
+    <div class="msg msg-bot">
+      Benvenuti! 👋 I'm Aria, your guide to everything at Casa Alo's Bistro. I can help with our menu, hours, reservations, dietary needs, parking, and more. What can I do for you today?
+    </div>
+  </div>
+
+  <div class="chat-suggestions" id="suggestions">
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">What's popular?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Gluten-free options?</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Make a reservation</span>
+    <span class="suggestion-chip" onclick="sendSuggestion(this)">Today's hours</span>
+  </div>
+
+  <div class="chat-input-area">
+    <textarea
+      id="chat-input"
+      rows="1"
+      placeholder="Ask me anything about the restaurant…"
+      onkeydown="handleKey(event)"
+      oninput="autoResize(this)"
+    ></textarea>
+    <button id="send-btn" onclick="sendMessage()" title="Send">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // ── Config ───────────────────────────────────────────────
+  const API_BASE = window.location.origin + '/api';
+  const SESSION_ID = 'session_' + Math.random().toString(36).slice(2, 9);
+
+  let chatOpen = false;
+  let isTyping = false;
+
+  // ── Toggle ───────────────────────────────────────────────
+  function toggleChat() {
+    chatOpen = !chatOpen;
+    document.getElementById('chat-window').classList.toggle('open', chatOpen);
+    document.getElementById('chat-bubble').classList.toggle('open', chatOpen);
+    document.getElementById('chat-badge').style.display = 'none';
+    if (chatOpen) document.getElementById('chat-input').focus();
+  }
+
+  function openChat() {
+    if (!chatOpen) toggleChat();
+  }
+
+  // ── Send message ─────────────────────────────────────────
+  async function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const text = input.value.trim();
+    if (!text || isTyping) return;
+
+    appendMessage(text, 'user');
+    input.value = '';
+    input.style.height = 'auto';
+    hideSuggestions();
+
+    const typingEl = showTyping();
+    isTyping = true;
+    document.getElementById('send-btn').disabled = true;
+
+    try {
+      const res = await fetch(`${API_BASE}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text, session_id: SESSION_ID }),
+      });
+
+      if (!res.ok) throw new Error(`Server error ${res.status}`);
+      const data = await res.json();
+
+      typingEl.remove();
+      appendMessage(data.response, 'bot', data.sources);
+    } catch (err) {
+      typingEl.remove();
+      appendMessage(
+        "I'm having a little trouble connecting right now. Please try again or call us at (540) 555-0123.",
+        'bot'
+      );
+    } finally {
+      isTyping = false;
+      document.getElementById('send-btn').disabled = false;
+    }
+  }
+
+  function sendSuggestion(el) {
+    document.getElementById('chat-input').value = el.textContent;
+    sendMessage();
+  }
+
+  // ── Helpers ──────────────────────────────────────────────
+  function appendMessage(text, role, sources) {
+    const container = document.getElementById('chat-messages');
+
+    const el = document.createElement('div');
+    el.className = `msg msg-${role}`;
+    el.textContent = text;
+    container.appendChild(el);
+
+    if (sources && sources.length > 0 && role === 'bot') {
+      const src = document.createElement('div');
+      src.className = 'msg-sources';
+      src.textContent = '📄 ' + sources.join(', ');
+      container.appendChild(src);
+    }
+
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function showTyping() {
+    const container = document.getElementById('chat-messages');
+    const el = document.createElement('div');
+    el.className = 'typing-indicator';
+    el.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+    container.appendChild(el);
+    container.scrollTop = container.scrollHeight;
+    return el;
+  }
+
+  function hideSuggestions() {
+    document.getElementById('suggestions').style.display = 'none';
+  }
+
+  function handleKey(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  }
+
+  function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 100) + 'px';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "name": "Casa Alo's Bistro",
+  "tagline": "Italian soul. Fredericksburg heart.",
+  "description": "Casa Alo's Bistro is a cozy Italian-American restaurant in the heart of Historic Downtown Fredericksburg, Virginia. We serve house-made pastas, wood-fired pizzas, and classic Italian secondi crafted from fresh, locally-sourced ingredients. Whether it's a weeknight dinner, a Sunday brunch, or a special celebration, we make every guest feel like family.",
+  "contact": {
+    "phone": "(540) 555-0123",
+    "email": "hello@casaalosbistro.com",
+    "events_email": "events@casaalosbistro.com",
+    "website": "casaalosbistro.com",
+    "instagram": "@casaalosbistro",
+    "facebook": "facebook.com/casaalosbistro"
+  },
+  "address": {
+    "street": "1217 Caroline Street",
+    "city": "Fredericksburg",
+    "state": "VA",
+    "zip": "22401",
+    "neighborhood": "Historic Downtown Fredericksburg",
+    "nearby_landmarks": [
+      "2 blocks from the Rappahannock River",
+      "5-minute walk from Fredericksburg VRE Station",
+      "Near Central Park shopping area",
+      "Walking distance from Mary Washington Hospital area"
+    ]
+  },
+  "hours": {
+    "monday": {"open": "11:00 AM", "close": "9:00 PM"},
+    "tuesday": {"open": "11:00 AM", "close": "9:00 PM"},
+    "wednesday": {"open": "11:00 AM", "close": "9:00 PM"},
+    "thursday": {"open": "11:00 AM", "close": "9:00 PM"},
+    "friday": {"open": "11:00 AM", "close": "10:00 PM"},
+    "saturday": {"open": "11:00 AM", "close": "10:00 PM"},
+    "sunday": {"open": "10:00 AM", "close": "8:00 PM", "note": "Sunday Brunch served 10am–3pm"}
+  },
+  "special_hours": {
+    "happy_hour": "Monday–Friday, 3:00 PM – 6:00 PM",
+    "sunday_brunch": "Sundays, 10:00 AM – 3:00 PM",
+    "live_music": "Fridays, 7:00 PM – 9:00 PM (acoustic)"
+  },
+  "seating": {
+    "indoor_capacity": 65,
+    "patio_capacity": 30,
+    "bar_seats": 12,
+    "private_dining_room": {
+      "capacity": 20,
+      "available_for": ["private dinners", "birthday celebrations", "rehearsal dinners", "corporate events", "baby showers"]
+    }
+  },
+  "parking": {
+    "street_parking": "Metered street parking on Caroline Street and surrounding blocks",
+    "private_lot": "Free private lot accessible from Hanover Street alley, behind the building. Holds approximately 20 cars.",
+    "tip": "On Friday and Saturday evenings, arrive a few minutes early to secure parking."
+  },
+  "policies": {
+    "reservations": "Strongly recommended for Friday/Saturday dinner. Held 15 minutes past booking time.",
+    "large_groups": "Groups of 8+ require advance booking. Please call at least one week ahead.",
+    "cancellation": "Modify or cancel at least 2 hours in advance. Large groups and private events require 48 hours notice.",
+    "dress_code": "Smart casual. No formal dress code required.",
+    "children": "Family-friendly. High chairs available. Simple pasta dishes available for children.",
+    "accessibility": "Fully wheelchair accessible entrance and ADA-compliant restrooms.",
+    "payment": "All major credit cards, contactless payments, and cash accepted.",
+    "wifi": "Complimentary Wi-Fi available. Ask server for password.",
+    "byob": "Not permitted. Full wine and beer list available."
+  },
+  "delivery_and_takeout": {
+    "takeout": "Available — call (540) 555-0123 or order online",
+    "delivery_platforms": ["DoorDash", "UberEats"],
+    "delivery_radius": "5 miles from downtown Fredericksburg"
+  },
+  "sourcing": {
+    "philosophy": "We prioritize local and regional producers wherever possible.",
+    "local_partners": [
+      "Produce from farms in Spotsylvania and King George counties",
+      "Free-range eggs from Culpeper",
+      "Rappahannock Lager — local Fredericksburg craft beer",
+      "Pasta flour and core ingredients imported from Italy"
+    ]
+  }
+}

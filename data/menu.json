@@ -1,0 +1,270 @@
+{
+  "restaurant": "Casa Alo's Bistro",
+  "menu_version": "Summer 2026",
+  "categories": [
+    {
+      "name": "Antipasti (Starters)",
+      "items": [
+        {
+          "name": "Bruschetta al Pomodoro",
+          "price": 9,
+          "description": "Grilled sourdough rubbed with garlic, topped with fresh heirloom tomatoes, basil, and a drizzle of extra virgin olive oil.",
+          "dietary": ["vegan", "contains gluten"]
+        },
+        {
+          "name": "Burrata e Prosciutto",
+          "price": 15,
+          "description": "Creamy burrata served alongside thinly sliced prosciutto di Parma, roasted cherry tomatoes, and aged balsamic.",
+          "dietary": ["gluten-free", "contains dairy"]
+        },
+        {
+          "name": "Calamari Fritti",
+          "price": 13,
+          "description": "Lightly breaded and fried squid rings served with our house-made marinara and lemon aioli.",
+          "dietary": ["contains gluten", "contains shellfish-adjacent"]
+        },
+        {
+          "name": "Zuppa di Cozze",
+          "price": 14,
+          "description": "Prince Edward Island mussels steamed in white wine, garlic, shallots, fresh thyme, and crushed tomato. Served with grilled focaccia.",
+          "dietary": ["contains shellfish", "contains gluten"]
+        },
+        {
+          "name": "Arancini",
+          "price": 11,
+          "description": "Three golden risotto balls filled with mozzarella and peas, served with spicy arrabbiata dipping sauce.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"]
+        }
+      ]
+    },
+    {
+      "name": "Insalate e Zuppe (Salads & Soups)",
+      "items": [
+        {
+          "name": "Caesar Classico",
+          "price": 12,
+          "description": "Romaine hearts, house-made Caesar dressing, shaved Parmigiano-Reggiano, and house-baked croutons. Add grilled chicken +$5, shrimp +$7.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy", "contains anchovies in dressing"]
+        },
+        {
+          "name": "Insalata della Casa",
+          "price": 10,
+          "description": "Mixed field greens, candied walnuts, dried cranberries, shaved fennel, and Gorgonzola with a honey-lemon vinaigrette.",
+          "dietary": ["vegetarian", "gluten-free", "contains dairy", "contains tree nuts"]
+        },
+        {
+          "name": "Panzanella",
+          "price": 13,
+          "description": "Tuscan bread salad with heirloom tomatoes, cucumber, red onion, capers, fresh basil, and a sherry vinegar dressing.",
+          "dietary": ["vegan", "contains gluten"]
+        },
+        {
+          "name": "Minestrone",
+          "price": 9,
+          "description": "Seasonal vegetables, cannellini beans, and ditalini pasta in a rich tomato-herb broth. Topped with a drizzle of basil oil.",
+          "dietary": ["vegan", "contains gluten"]
+        },
+        {
+          "name": "Zuppa di Lenticchie",
+          "price": 9,
+          "description": "Slow-cooked Umbrian lentil soup with smoked pancetta, rosemary, and a squeeze of lemon.",
+          "dietary": ["gluten-free", "contains pork"]
+        }
+      ]
+    },
+    {
+      "name": "Paste (Pastas)",
+      "note": "All pastas are house-made. Gluten-free pasta substitute available for +$3.",
+      "items": [
+        {
+          "name": "Cacio e Pepe",
+          "price": 18,
+          "description": "Our most beloved dish. Roman-style pasta tossed with Pecorino Romano, cracked black pepper, and a touch of butter. Simple. Perfect.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"],
+          "popular": true
+        },
+        {
+          "name": "Rigatoni all'Amatriciana",
+          "price": 20,
+          "description": "Rigatoni with guanciale, San Marzano tomatoes, Pecorino Romano, and a pinch of Calabrian chili.",
+          "dietary": ["contains gluten", "contains dairy", "contains pork"]
+        },
+        {
+          "name": "Tagliatelle al Ragù Bolognese",
+          "price": 22,
+          "description": "Slow-braised beef and pork ragù over egg tagliatelle, finished with Parmigiano-Reggiano. Four hours in the making.",
+          "dietary": ["contains gluten", "contains dairy", "contains beef", "contains pork"]
+        },
+        {
+          "name": "Linguine alle Vongole",
+          "price": 24,
+          "description": "Littleneck clams, white wine, garlic, cherry tomatoes, and fresh parsley over linguine.",
+          "dietary": ["contains gluten", "contains shellfish"]
+        },
+        {
+          "name": "Gnocchi al Pesto",
+          "price": 19,
+          "description": "Hand-rolled potato gnocchi with classic Genovese basil pesto, green beans, and potatoes.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy", "contains tree nuts (pine nuts)"]
+        },
+        {
+          "name": "Pappardelle ai Funghi",
+          "price": 21,
+          "description": "Wide egg pappardelle with a wild mushroom (porcini, shiitake, cremini) ragù, fresh thyme, and truffle oil.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"]
+        },
+        {
+          "name": "Lasagna della Nonna",
+          "price": 22,
+          "description": "Layers of house-made pasta, slow-cooked Bolognese, béchamel, and Parmigiano-Reggiano. A recipe passed down three generations.",
+          "dietary": ["contains gluten", "contains dairy", "contains beef", "contains pork"]
+        }
+      ]
+    },
+    {
+      "name": "Pizze (Wood-Fired Pizzas)",
+      "note": "All pizzas are 12-inch, baked in our 800°F wood-fired oven. Gluten-free crust available for +$4.",
+      "items": [
+        {
+          "name": "Margherita",
+          "price": 17,
+          "description": "San Marzano tomato sauce, fresh fior di latte mozzarella, fresh basil, and extra virgin olive oil. The classic.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"],
+          "popular": true
+        },
+        {
+          "name": "Quattro Formaggi",
+          "price": 20,
+          "description": "Mozzarella, Gorgonzola, Taleggio, and Parmigiano-Reggiano with a drizzle of honey and fresh thyme.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"]
+        },
+        {
+          "name": "Diavola",
+          "price": 19,
+          "description": "San Marzano tomato, mozzarella, spicy Calabrian salami, Castelvetrano olives, and fresh basil.",
+          "dietary": ["contains gluten", "contains dairy", "contains pork", "spicy"]
+        },
+        {
+          "name": "Prosciutto e Rucola",
+          "price": 21,
+          "description": "Mozzarella, prosciutto di Parma, wild arugula, shaved Parmigiano, and a lemon-olive oil drizzle.",
+          "dietary": ["contains gluten", "contains dairy", "contains pork"]
+        },
+        {
+          "name": "Pizza Bianca ai Funghi",
+          "price": 20,
+          "description": "No tomato sauce. Truffle crema base, wild mushrooms, mozzarella, caramelized onion, and fresh thyme.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"]
+        }
+      ]
+    },
+    {
+      "name": "Secondi (Mains)",
+      "items": [
+        {
+          "name": "Pollo alla Cacciatore",
+          "price": 26,
+          "description": "Braised free-range chicken thighs with olives, capers, San Marzano tomatoes, white wine, and rosemary. Served with creamy polenta.",
+          "dietary": ["gluten-free", "contains dairy"]
+        },
+        {
+          "name": "Branzino al Forno",
+          "price": 32,
+          "description": "Whole roasted Mediterranean sea bass with lemon, capers, garlic, fresh herbs, and a drizzle of Sicilian olive oil. Served with roasted vegetables.",
+          "dietary": ["gluten-free", "contains fish"]
+        },
+        {
+          "name": "Tagliata di Manzo",
+          "price": 38,
+          "description": "Sliced 8oz grilled ribeye over a bed of arugula with cherry tomatoes, shaved Parmigiano, and truffle oil. Served with roasted potatoes.",
+          "dietary": ["gluten-free", "contains dairy", "contains beef"]
+        },
+        {
+          "name": "Melanzane alla Parmigiana",
+          "price": 22,
+          "description": "Layers of fried eggplant, San Marzano tomato sauce, mozzarella, and Parmigiano-Reggiano, baked until golden.",
+          "dietary": ["vegetarian", "contains gluten", "contains dairy"]
+        },
+        {
+          "name": "Osso Buco alla Milanese",
+          "price": 42,
+          "description": "Slow-braised veal shank with gremolata, served over saffron risotto. Our weekend special — available Friday and Saturday only.",
+          "dietary": ["gluten-free", "contains dairy", "contains veal"],
+          "availability": "Friday and Saturday only"
+        }
+      ]
+    },
+    {
+      "name": "Dolci (Desserts)",
+      "items": [
+        {
+          "name": "Tiramisù",
+          "price": 10,
+          "description": "Classic tiramisù made with house-espresso-soaked ladyfingers, mascarpone cream, and a generous dusting of dark cocoa.",
+          "dietary": ["contains gluten", "contains dairy", "contains eggs", "contains alcohol (rum)"],
+          "popular": true
+        },
+        {
+          "name": "Panna Cotta al Miele",
+          "price": 9,
+          "description": "Vanilla panna cotta with local Fredericksburg honey, macerated strawberries, and crushed amaretti.",
+          "dietary": ["gluten-free", "contains dairy"]
+        },
+        {
+          "name": "Cannoli Siciliani",
+          "price": 10,
+          "description": "Two crispy cannoli shells filled with house-made ricotta cream, chocolate chips, and candied orange peel.",
+          "dietary": ["contains gluten", "contains dairy"]
+        },
+        {
+          "name": "Gelato del Giorno",
+          "price": 8,
+          "description": "Three scoops of our house-made gelato. Flavors rotate daily — ask your server. Today's flavors are posted on the board.",
+          "dietary": ["gluten-free option available", "contains dairy"]
+        },
+        {
+          "name": "Torta al Cioccolato",
+          "price": 11,
+          "description": "Warm flourless chocolate cake with Valrhona 70% cocoa, served with vanilla gelato and raspberry coulis.",
+          "dietary": ["gluten-free", "contains dairy", "contains eggs"]
+        }
+      ]
+    },
+    {
+      "name": "Bevande (Drinks)",
+      "subsections": [
+        {
+          "name": "Non-Alcoholic",
+          "items": [
+            {"name": "San Pellegrino Sparkling Water", "price": 4, "size": "750ml"},
+            {"name": "Acqua Panna Still Water", "price": 4, "size": "750ml"},
+            {"name": "Fresh-Squeezed Lemonade", "price": 5, "description": "Made daily with Amalfi-inspired herbs"},
+            {"name": "Italian Sodas", "price": 5, "description": "Blood orange, elderflower, or Sicilian lemon"},
+            {"name": "House-Brewed Iced Tea", "price": 4, "description": "Peach or classic"},
+            {"name": "Espresso", "price": 4},
+            {"name": "Cappuccino", "price": 5},
+            {"name": "Americano", "price": 4}
+          ]
+        },
+        {
+          "name": "Wine by the Glass",
+          "items": [
+            {"name": "Pinot Grigio, Santa Margherita (Veneto)", "price": 12, "type": "white"},
+            {"name": "Vermentino, Sella & Mosca (Sardinia)", "price": 11, "type": "white"},
+            {"name": "Chianti Classico, Castello di Ama (Tuscany)", "price": 14, "type": "red"},
+            {"name": "Montepulciano d'Abruzzo, Villa Medoro", "price": 11, "type": "red"},
+            {"name": "Prosecco DOC, La Marca", "price": 10, "type": "sparkling"}
+          ]
+        },
+        {
+          "name": "Beer",
+          "items": [
+            {"name": "Peroni Nastro Azzurro", "price": 7, "origin": "Italy"},
+            {"name": "Moretti", "price": 7, "origin": "Italy"},
+            {"name": "Rappahannock Lager (Local — Fredericksburg)", "price": 7, "origin": "local"}
+          ]
+        }
+      ]
+    }
+  ]
+}

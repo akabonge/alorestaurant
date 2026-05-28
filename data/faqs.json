@@ -1,0 +1,158 @@
+{
+  "faqs": [
+    {
+      "category": "Reservations",
+      "questions": [
+        {
+          "q": "Do you take reservations?",
+          "a": "Yes! We strongly recommend reservations, especially on Friday and Saturday evenings. You can book online through our website or call us at (540) 555-0123. We hold reservations for 15 minutes past the booking time."
+        },
+        {
+          "q": "How far in advance should I book?",
+          "a": "For weekdays, 1–2 days ahead is usually fine. For Friday and Saturday dinner, we recommend booking at least 3–5 days in advance, as we fill up quickly. For large groups of 8 or more, please call us at least a week ahead."
+        },
+        {
+          "q": "Do you take walk-ins?",
+          "a": "Absolutely — we welcome walk-ins and always try to accommodate guests. However, availability is not guaranteed on busy nights. The bar area and patio are first-come, first-served and do not require a reservation."
+        },
+        {
+          "q": "Can I make a reservation for a large group or private event?",
+          "a": "Yes! We have a private dining room that seats up to 20 guests, perfect for birthday dinners, rehearsal dinners, corporate events, and celebrations. Please call us at (540) 555-0123 or email events@casaalosbistro.com to discuss availability and custom menus."
+        },
+        {
+          "q": "What is your cancellation policy?",
+          "a": "We ask that you cancel or modify your reservation at least 2 hours before your booking time. For private events and large groups, we require 48 hours notice. You can cancel online or by calling us."
+        }
+      ]
+    },
+    {
+      "category": "Dietary & Allergies",
+      "questions": [
+        {
+          "q": "Do you have vegetarian or vegan options?",
+          "a": "Yes! We have several vegetarian dishes including Gnocchi al Pesto, Pappardelle ai Funghi, Margherita pizza, Melanzane alla Parmigiana, and more. For vegan guests, our Bruschetta, Panzanella salad, and Minestrone soup are fully vegan. Please let your server know and we'll guide you through the menu."
+        },
+        {
+          "q": "Do you offer gluten-free options?",
+          "a": "Yes. We offer gluten-free pasta as a substitute for any pasta dish (+$3) and a gluten-free pizza crust (+$4). Several dishes on our menu are naturally gluten-free, including the Burrata e Prosciutto, Branzino al Forno, Tagliata di Manzo, and all of our soups marked gluten-free. Please alert your server to any gluten sensitivity and we will take care of you."
+        },
+        {
+          "q": "Can you accommodate nut allergies?",
+          "a": "Our kitchen handles tree nuts (pine nuts, walnuts) and we cannot guarantee a completely nut-free environment. However, please inform your server of any nut allergy and we will clearly identify which dishes to avoid and take extra precautions in preparation."
+        },
+        {
+          "q": "Do you accommodate other food allergies?",
+          "a": "We take food allergies very seriously. Please inform your server of any allergies when you arrive. Our kitchen works with shellfish, dairy, gluten, eggs, tree nuts, and fish. We will do our best to accommodate your needs safely."
+        },
+        {
+          "q": "Is your pasta house-made?",
+          "a": "Yes — all of our pastas are made fresh in-house daily. This includes our tagliatelle, pappardelle, rigatoni, linguine, gnocchi, and lasagna sheets. We use semolina and '00' flour imported from Italy."
+        }
+      ]
+    },
+    {
+      "category": "Location & Parking",
+      "questions": [
+        {
+          "q": "Where are you located?",
+          "a": "We're located at 1217 Caroline Street, Fredericksburg, VA 22401 — in the heart of Historic Downtown Fredericksburg, just two blocks from the Rappahannock River. We're easy to find and within walking distance of many downtown shops and the VRE train station."
+        },
+        {
+          "q": "Is there parking nearby?",
+          "a": "Yes! There is metered street parking on Caroline Street and nearby side streets. We also have a free private parking lot accessible from the alley behind our building off Hanover Street — look for the Casa Alo's Bistro sign. The lot holds about 20 cars. On busy Friday and Saturday nights we recommend arriving a few minutes early for parking."
+        },
+        {
+          "q": "Are you near the VRE station?",
+          "a": "Yes, we're about a 5-minute walk from the Fredericksburg VRE station, making us a great option for commuters coming in from Northern Virginia or Washington DC for dinner."
+        }
+      ]
+    },
+    {
+      "category": "Hours & Operations",
+      "questions": [
+        {
+          "q": "What are your hours?",
+          "a": "We are open Monday through Thursday from 11:00 AM to 9:00 PM, Friday and Saturday from 11:00 AM to 10:00 PM, and Sunday from 10:00 AM to 8:00 PM (with our Sunday Brunch menu available until 3:00 PM)."
+        },
+        {
+          "q": "Do you offer brunch?",
+          "a": "Yes! We serve a Sunday Brunch menu every Sunday from 10:00 AM to 3:00 PM, featuring Italian-inspired brunch dishes alongside bottomless mimosas and our full coffee menu."
+        },
+        {
+          "q": "Do you have a happy hour?",
+          "a": "Yes! Monday through Friday from 3:00 PM to 6:00 PM we offer Happy Hour specials: $2 off all wines by the glass, $1 off draft beers, and half-price Arancini and Bruschetta."
+        },
+        {
+          "q": "Are you open on holidays?",
+          "a": "We are open most holidays, though with modified hours on Thanksgiving, Christmas Eve, and Christmas Day. We are closed on New Year's Day. Check our website or call us for holiday hours."
+        },
+        {
+          "q": "Do you have outdoor seating?",
+          "a": "Yes! We have a charming covered patio on the side of the building, open year-round weather permitting (we have outdoor heaters for cooler months). The patio seats about 30 guests and is perfect for al fresco dining."
+        }
+      ]
+    },
+    {
+      "category": "Menu & Food",
+      "questions": [
+        {
+          "q": "What are your most popular dishes?",
+          "a": "Our guests always rave about the Cacio e Pepe pasta, the Margherita pizza from our wood-fired oven, and the Tiramisù for dessert. The Osso Buco alla Milanese (available Fri-Sat) is also a fan favorite for a special-occasion meal."
+        },
+        {
+          "q": "Do you have a kids menu?",
+          "a": "We don't have a dedicated kids menu, but we're happy to prepare simple pasta dishes for younger guests, such as pasta with marinara or butter and Parmigiano. Just ask your server."
+        },
+        {
+          "q": "Can I see your full menu online?",
+          "a": "Yes, our full menu is available on our website at casaalosbistro.com. We also post daily specials on our Instagram page @casaalosbistro."
+        },
+        {
+          "q": "Do you do takeout or delivery?",
+          "a": "Yes! We offer takeout — just call (540) 555-0123 or order online through our website. We also deliver through DoorDash and UberEats within a 5-mile radius of downtown Fredericksburg."
+        },
+        {
+          "q": "Do you do catering?",
+          "a": "Yes, we offer catering services for private events, corporate lunches, and special occasions. We can build a custom menu to suit your event and budget. Contact us at events@casaalosbistro.com or call (540) 555-0123."
+        },
+        {
+          "q": "Are your ingredients locally sourced?",
+          "a": "We prioritize local and regional producers wherever possible. Our produce comes from farms in Spotsylvania and King George counties, our eggs from a free-range farm in Culpeper, and we proudly feature Rappahannock Lager, a local Fredericksburg craft beer, on our menu."
+        }
+      ]
+    },
+    {
+      "category": "Experience & Policies",
+      "questions": [
+        {
+          "q": "Is Casa Alo's family-friendly?",
+          "a": "Absolutely! We welcome families and children. We have high chairs available and a relaxed, warm atmosphere. Sunday brunch in particular is a popular family outing."
+        },
+        {
+          "q": "Is the restaurant accessible?",
+          "a": "Yes. Our main entrance on Caroline Street is wheelchair accessible, and our restrooms are ADA-compliant. If you have any specific accessibility needs, please call ahead and we'll ensure your comfort."
+        },
+        {
+          "q": "Do you have Wi-Fi?",
+          "a": "Yes, we offer complimentary Wi-Fi. Ask your server for the password."
+        },
+        {
+          "q": "Do you accept credit cards?",
+          "a": "Yes, we accept all major credit cards (Visa, Mastercard, Amex, Discover) and contactless payments. We also accept cash."
+        },
+        {
+          "q": "Can I bring my own wine (BYOB)?",
+          "a": "We have a full wine list and do not offer BYOB. However, we're always happy to recommend wines that pair well with your meal — just ask your server."
+        },
+        {
+          "q": "Do you have a dress code?",
+          "a": "Smart casual is the vibe — no formal dress code. Come as you are, whether that's a nice dinner out or after exploring downtown Fredericksburg."
+        },
+        {
+          "q": "Is there live music?",
+          "a": "Yes! We feature live acoustic music every Friday evening from 7:00 PM to 9:00 PM and occasional special events on Saturdays. Check our website and Instagram for the current schedule."
+        }
+      ]
+    }
+  ]
+}
