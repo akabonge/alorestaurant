@@ -1,9 +1,73 @@
-# Casa Alo's Bistro — AI Chatbot Demo
+# Casa Alo's Bistro — Aria AI Chatbot
+
+**Demo 1 of the AI Alo Portfolio** · [aialo.io](https://aialo.io)
 
 A RAG-powered restaurant chatbot built with FastAPI, ChromaDB, and sentence-transformers.
 Supports Ollama (local, free) and Claude API (cloud, best quality) via a single `.env` flag.
 
-This is Demo 1 in the AI automation portfolio for local business consulting.
+**The pain point it solves:** Restaurant staff spend hours answering the same questions every day — menu questions, hours, allergens, reservations. Aria handles all of it 24/7.
+
+---
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    subgraph Browser["Browser (Client)"]
+        SITE["Restaurant Website\nindex.html + app.js\nAria chat widget"]
+    end
+
+    subgraph Server["FastAPI Server — port 8080"]
+        MAIN["main.py\nStatic file serving + CORS"]
+        ROUTER["router.py\nPOST /api/chat"]
+    end
+
+    subgraph RAG["RAG Pipeline"]
+        direction TB
+        EMBED["embedder.py\nsentence-transformers\nall-MiniLM-L6-v2 (local)"]
+        CHROMA[("ChromaDB\nchroma_store/\npersistent vector DB")]
+        PIPE["pipeline.py\nSystem prompt + context\n→ Aria personality"]
+    end
+
+    subgraph LLM["LLM Layer (dual)"]
+        CLAUDE["☁ Claude Haiku\n(Anthropic API)"]
+        OLLAMA["⬡ Ollama llama3.2\n(local fallback)"]
+    end
+
+    subgraph Data["Knowledge Base"]
+        FILES["data/\nmenu.json · faqs.json\nrestaurant_info.json"]
+    end
+
+    INGEST["scripts/ingest_data.py\n(run once)"]
+
+    SITE -->|"POST /api/chat"| ROUTER
+    MAIN --> ROUTER
+    ROUTER --> PIPE
+    PIPE --> EMBED
+    EMBED -->|"query embedding"| CHROMA
+    CHROMA -->|"top chunks"| PIPE
+    PIPE -->|"API key set?"| CLAUDE
+    PIPE -->|"no API key"| OLLAMA
+    CLAUDE -->|"response"| ROUTER
+    OLLAMA -->|"response"| ROUTER
+    FILES --> INGEST
+    INGEST --> EMBED
+    EMBED -->|"batch embeddings"| CHROMA
+```
+
+---
+
+## Part of the AI Alo Portfolio
+
+| Demo | Business | Key Feature |
+|---|---|---|
+| **Demo 1** | **Casa Alo's Bistro** | **Restaurant RAG chatbot** |
+| Demo 2 | Rappahannock Realty Group | Lead qualifier + CRM dashboard |
+| Demo 3 | Luminara Med Spa | Treatment recommender + candidacy screening |
+
+Built by [Aloysious Kabonge](https://aialo.io) — AI automation consulting for local businesses in Fredericksburg, VA.
+
+---
 
 ## Stack
 
