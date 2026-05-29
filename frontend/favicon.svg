@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#7c2d12"/>
+  <!-- Steam lines -->
+  <path d="M12 10 Q13 7 12 5" stroke="#fed7aa" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M16 10 Q17 7 16 5" stroke="#fed7aa" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M20 10 Q21 7 20 5" stroke="#fed7aa" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Bowl body -->
+  <path d="M7 17 Q7 26 16 26 Q25 26 25 17 Z" fill="#f97316"/>
+  <!-- Bowl rim -->
+  <rect x="7" y="15" width="18" height="3" rx="1.5" fill="#ea580c"/>
+</svg>
