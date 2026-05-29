@@ -5,12 +5,15 @@ from fastapi.responses import FileResponse
 import os
 
 from app.router import router
+from app.tools.mock_db import init_db
 
 app = FastAPI(
     title="Casa Alo's Bistro — AI Assistant",
     description="RAG-powered chatbot for Casa Alo's Bistro, Fredericksburg VA",
     version="1.0.0",
 )
+
+init_db()
 
 app.add_middleware(
     CORSMiddleware,

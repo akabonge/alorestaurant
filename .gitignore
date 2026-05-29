@@ -11,3 +11,4 @@ chroma_store/
 dist/
 build/
 .pytest_cache/
+*.db
